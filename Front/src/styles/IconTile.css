@@ -1,0 +1,38 @@
+.IconTile {
+    display: grid;
+    place-items: center;
+}
+
+[data-icon="logo"]{
+    background-color: var(--color-black);
+}
+
+[data-icon="sidenav"]{
+    height: 64px;
+    width: 64px;
+    border-radius: 6px;
+    background-color: var(--color-white);
+}
+
+[data-icon^="keyData"]{
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+}
+
+/*Calories, Proteines, Glucides, Lipides*/
+[data-icon$="Calories" i]{
+    background-color: var(--color-red-light);
+}
+
+[data-icon$="Proteines" i]{
+    background-color: var(--color-blue-light);
+}
+
+[data-icon$="Glucides" i]{
+    background-color: var(--color-yellow-light);
+}
+
+[data-icon$="Lipides" i]{
+    background-color: var(--color-pink-light);
+}
