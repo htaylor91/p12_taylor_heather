@@ -1,0 +1,37 @@
+:root {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --color-black: hsl(240 20% 1%);
+  --color-white: hsl(240 20% 100%);
+
+  --color-yellow-light: hsl(46 73% 94%);
+  --color-yellow-dark: hsl(48 98% 52%);
+
+  --color-pink-light: hsl(342 68% 95%);
+  --color-pink-dark: hsl(348 98% 65%);
+
+  --color-blue-light: hsl(203 69% 95%);
+  --color-blue: hsl(204 100% 65%);
+  --color-blue-dark: (229, 28%, 18%);
+
+  --color-red-light: hsl(0 68% 95%);
+  --color-red: hsl(0 100% 50%);
+  --color-red-dark: hsl(0 100% 45%);
+
+  --color-gray-light: hsl(0 0% 87%);
+  --color-gray: hsl(227 9% 50%);
+  --color-gray-dark: hsl(203 9% 17%);
+}
+
+/*Resets*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
