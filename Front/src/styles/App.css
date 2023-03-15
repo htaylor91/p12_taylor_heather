@@ -1,0 +1,28 @@
+#root, .App {
+  min-height: 100vh;
+}
+
+.App {
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "sidenav main";
+
+  grid-template-columns: 117px 1fr;
+  grid-template-rows: 91px 1fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.Profile {
+  grid-area: main;
+  padding: 56px 88px 0px 107px;
+}
+
+
