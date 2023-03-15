@@ -2,6 +2,7 @@
   "name": "P12_TAYLOR_HEATHER",
   "version": "0.1.0",
   "private": false,
+  "homepage" : "https://htaylor91.github.io/P12_TAYLOR_Heather",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
