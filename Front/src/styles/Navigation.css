@@ -1,0 +1,64 @@
+
+.header, .logo-wrapper, .header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    height: 91px;
+    background-color: var(--color-black);
+    font-size: 24px;
+    padding-inline: 30px;
+}
+
+.logo-wrapper {
+    margin-right: 50px;
+}
+
+h1 {
+    font-size: 24px; /*1.5rem*/
+    color: var(--color-red);
+}
+
+.header > nav {
+    flex: 1;
+}
+
+.header ul {
+    justify-content: space-between;
+    color: var(--color-white);
+}
+
+.navlink {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 117px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.sidenav-wrapper {
+    display: grid;
+    place-content: center;
+    gap: 20px;
+}
+
+.copyright-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 12px;    /*0.75rem*/
+    font-weight: 500;
+    align-self: center;
+}
