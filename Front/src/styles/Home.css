@@ -1,0 +1,16 @@
+.Home {
+    display: flex; 
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.Home > div {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.Home > div > span {
+    font-weight: 700;
+}
