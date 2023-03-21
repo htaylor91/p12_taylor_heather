@@ -1,0 +1,22 @@
+.MacrosCard {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 124px;
+    width: 258px;
+    padding: 32px;
+    border-radius: 5px;
+}
+
+.MacrosCard h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.MacrosCard p {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+
