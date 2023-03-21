@@ -20,6 +20,7 @@
   --color-red: hsl(0 100% 50%);
   --color-red-dark: hsl(0 100% 45%);
 
+  --color-gray-lightest: hsl(0 0% 97%);
   --color-gray-light: hsl(0 0% 87%);
   --color-gray: hsl(227 9% 50%);
   --color-gray-dark: hsl(203 9% 17%);
