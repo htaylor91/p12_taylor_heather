@@ -6,6 +6,7 @@ import {SportSeeAPIMocked} from './mocks/services/MockedService.js';
 
 import App from './pages/App.jsx';
 import ErrorPage from "./pages/ErrorPage.jsx";
+import Home from './pages/Home.jsx';
 import Profile from './pages/Profile.jsx';
 
 const router = createHashRouter([
@@ -17,7 +18,7 @@ const router = createHashRouter([
         children: [
             {
                 index: true,
-                element: <div>Accueil</div>
+                element: <Home/>
             },
             {
                 path: "/profil/user/:id",
