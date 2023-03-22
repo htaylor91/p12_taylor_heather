@@ -1,30 +1,29 @@
-import { useContext } from 'react';
 import '../styles/Home.css'
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
-import { ServiceContext } from '../contexts/ServiceContext';
-import toggleService from '../utils/toggleService';
-import toggleUser from '../utils/toggleUser';
+import { useCurrentUser, useCurrentUserUpdate } from '../contexts/CurrentUserContext';
+import { useService, useServiceUpdate } from '../contexts/ServiceContext';
 import Toggle from '../components/Toggle';
-import { SportSeeAPI } from '../services/APIService';
 
 function Home() {
-    const {currentUser, setCurrentUser} = useContext(CurrentUserContext);
-    const {currentService, setCurrentService} = useContext(ServiceContext);
+    const currentUser = useCurrentUser();
+    const toggleCurrentUser = useCurrentUserUpdate();
+
+    const currentService = useService();
+    const toggleService = useServiceUpdate();
 
     return (
         <main className='Home'>
             <div>
                 <Toggle
-                    handleChange={()=> toggleService({currentService, setCurrentService})} 
+                    handleChange={toggleService} 
                     labelText="Service:" 
                     toggleId="toggle-service" 
-                    checked={currentService === SportSeeAPI}
+                    checked={currentService.constructor.name === 'APIService'}
                 /> 
                 <span>{currentService.constructor.name}</span>
             </div>
             <div>
                 <Toggle 
-                    handleChange={()=> toggleUser({currentUser, setCurrentUser})} 
+                    handleChange={toggleCurrentUser}
                     labelText="Utilisateur:" 
                     toggleId="toggle-user" 
                     checked={currentUser === 18}
@@ -36,4 +35,3 @@ function Home() {
 }
 
 export default Home;
-
