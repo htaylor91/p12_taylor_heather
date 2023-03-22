@@ -22,6 +22,8 @@
 
   --color-gray-lightest: hsl(0 0% 97%);
   --color-gray-light: hsl(0 0% 87%);
+  --color-gray-semi-transparent: hsla(0, 0%, 77%, 0.5);
+
   --color-gray: hsl(227 9% 50%);
   --color-gray-dark: hsl(203 9% 17%);
 }
