@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as ReactDOM from "react-dom/client";
 import './styles/index.css';
 import {createHashRouter, RouterProvider} from "react-router-dom";
-import {SportSeeAPIMocked} from './mocks/services/MockedService.js';
 
 import App from './pages/App.jsx';
 import ErrorPage from "./pages/ErrorPage.jsx";
@@ -13,7 +12,7 @@ const router = createHashRouter([
     {
         path: "/",
         basename: "/P12_TAYLOR_Heather",
-        element: <App userId={12} service={SportSeeAPIMocked}/>,
+        element: <App/>,
         errorElement: <ErrorPage />,
         children: [
             {
