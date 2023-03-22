@@ -1,36 +1,24 @@
 import * as React from 'react';
-import '../styles/App.css'
-import PropTypes from "prop-types";
-import { useState} from "react";
+import '../styles/App.css';
 import { Outlet } from "react-router-dom";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import { ServiceContext } from "../contexts/ServiceContext";
+import { CurrentUserProvider } from '../contexts/CurrentUserContext';
+import { ServiceProvider } from '../contexts/ServiceContext';
 
+import HeaderNavigation from '../components/HeaderNavigation';
+import SideNavigation from '../components/SideNavigation';
 
-import HeaderNavigation from '../components/HeaderNavigation'
-import SideNavigation from '../components/SideNavigation'
-
-function App({userId, service}) {
-  const [currentUser, setCurrentUser] = useState(userId);
-  const [currentService, setCurrentService] = useState(service);
-  
+function App() {
   return (
     <div className="App">
-      <CurrentUserContext.Provider value={{currentUser, setCurrentUser}}>
-        <ServiceContext.Provider value={{currentService, setCurrentService}}>
+      <CurrentUserProvider>
+        <ServiceProvider>
           <HeaderNavigation />
           <SideNavigation />
-          <Outlet />
-        </ServiceContext.Provider>
-      </CurrentUserContext.Provider>
-
+            <Outlet />
+        </ServiceProvider>
+      </CurrentUserProvider>
     </div>
   )
-}
-
-App.propTypes = {
-  userId: PropTypes.number.isRequired,
-  service: PropTypes.object.isRequired
 }
 
 export default App
