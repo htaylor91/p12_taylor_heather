@@ -1,0 +1,15 @@
+.SessionsTooltip {
+    padding: .5rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: 500;
+    fontSize: .5rem;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.SessionsTooltip-label {
+    fontSize: .5rem;
+    fontWeight: 500;
+}
