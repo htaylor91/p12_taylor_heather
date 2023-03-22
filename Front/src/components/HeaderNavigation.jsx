@@ -2,11 +2,10 @@ import logo from '../assets/logo.svg';
 import '../styles/Navigation.css'
 import IconTile from './IconTile'
 import { NavLink } from 'react-router-dom';
-import { useContext } from 'react';
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
+import { useCurrentUser } from '../contexts/CurrentUserContext';
 
 function HeaderNavigation() {
-    const {currentUser} = useContext(CurrentUserContext);
+    const currentUser = useCurrentUser();
     
     return (
         <header className='header'>
