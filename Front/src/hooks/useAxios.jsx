@@ -1,10 +1,10 @@
-import { useContext, useState, useEffect } from 'react';
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
-import { ServiceContext } from '../contexts/ServiceContext';
+import { useState, useEffect } from 'react';
+import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useService } from '../contexts/ServiceContext';
 
 export default function useAxios(subService) {
-    const userId = useContext(CurrentUserContext).currentUser;
-    const serviceContext = useContext(ServiceContext).currentService;
+    const userId = useCurrentUser();
+    const serviceContext = useService();
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -14,5 +14,5 @@ export default function useAxios(subService) {
         serviceContext[subService].getData(userId, setData, setLoading, setError);
     }, [userId]);
 
-    return [data, loading, error];
+    return [loading, error, data];
 }
