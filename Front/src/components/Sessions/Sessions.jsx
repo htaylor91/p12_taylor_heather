@@ -3,12 +3,17 @@ import useAxios from '../../hooks/useAxios';
 
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import SessionsTooltip from './SessionsTooltip';
+import Error from '../Error';
+import Loading from '../Loading';
 
+/**
+ * @component
+ */
 function Sessions() {
-  const [loading, error, data] = useAxios('sessionsService');
+  const {loading, error, data} = useAxios('sessionsService');
 
-  if(loading) return <div>Loading...</div>
-  if(error) return <div>Error</div>
+  if(loading) return <Loading></Loading>
+  if(error) return <Error></Error>
   if(data){
     const sessionsData = new SessionsModel(data);
     const graphData = sessionsData?.sessions;
@@ -53,8 +58,10 @@ function Sessions() {
               />
 
               <Tooltip 
-                content={<SessionsTooltip/>} 
+                content={<SessionsTooltip/>}
+                style={{border: 'none', outline: 'none'}}
                 cursor={false}
+                wrapperStyle={{outline: 'none'}}
               />
 
               <Line 
@@ -70,6 +77,7 @@ function Sessions() {
           </ResponsiveContainer>
     );
   }
+  return null;
 };
 
 export default Sessions;
