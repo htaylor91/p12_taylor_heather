@@ -1,3 +1,10 @@
+/**
+ * @module MockedData
+ */
+
+/**
+ * @const {Object[]} USER_MAIN_DATA - The user main data
+ */
 const USER_MAIN_DATA = [
     {
         id: 12,
@@ -31,6 +38,9 @@ const USER_MAIN_DATA = [
     }
 ]
 
+/**
+ * @const {Object[]} USER_ACTIVITY - The user activity data
+ */
 const USER_ACTIVITY = [
     {
         userId: 12,
@@ -114,7 +124,9 @@ const USER_ACTIVITY = [
     }
 ]
 
-
+/**
+ * @const {Object[]} USER_AVERAGE_SESSIONS - The user sessions data
+ */
 const USER_AVERAGE_SESSIONS = [
     {
         userId: 12,
@@ -184,7 +196,9 @@ const USER_AVERAGE_SESSIONS = [
     }
 ]
 
-
+/**
+ * @const {Object[]} USER_PERFORMANCE - The user performance data
+ */
 const USER_PERFORMANCE = [
     {
         userId: 12,
@@ -261,8 +275,6 @@ const USER_PERFORMANCE = [
         ]
     }
 ]
-
-
 
 export {
     USER_MAIN_DATA,
