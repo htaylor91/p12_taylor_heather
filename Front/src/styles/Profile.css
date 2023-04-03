@@ -1,0 +1,27 @@
+.container-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.macros {
+    justify-content: space-between;
+}
+
+.Profile {
+    padding-left: 1rem;
+}
+
+.Profile-charts {
+    padding-top: 70px;
+    gap: 30px;
+}
+
+.Profile-square-charts {
+    padding-top: 30px;
+}
