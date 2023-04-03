@@ -14,6 +14,9 @@ const ScoreStyles = {
   }
 }
 
+/**
+ * @component
+ */
 function Score({score}){
   const data = [{score: `${score}`, fill: 'var(--color-red)'}];
 
@@ -30,7 +33,6 @@ function Score({score}){
         data={data}
         startAngle={90}
         endAngle={450}
-        domain={(0, 1)}
       >
         <PolarAngleAxis
           type="number"
@@ -57,10 +59,14 @@ function Score({score}){
       </RadialBarChart>
     </ResponsiveContainer>
     );
+
 }
 
 Score.propTypes = {
-  score: PropTypes.number.isRequired,
+  /**
+   * The score of the user.
+   */
+  score: PropTypes.number,
 };
 
 export default Score;
