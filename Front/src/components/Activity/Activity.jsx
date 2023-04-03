@@ -1,10 +1,9 @@
-
 import useAxios from '../../hooks/useAxios';
 import ActivityModel from '../../models/ActivityModel';
-
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
 import ActivityTooltip from './ActivityTooltip';
+import Loading from '../Loading';
+import Error from '../Error'
 
 const ActivityStyles = {
   text : {
@@ -13,19 +12,20 @@ const ActivityStyles = {
   }
 }
 
+/**
+ * @component
+ */
 function Activity(){
+  const {loading, error, data} = useAxios('activityService');
   
-  const [loading, error, data] = useAxios('activityService');
-  
-  if(loading) return <div>Loading...</div>
-  if(error) return <div>Error</div>
+  if(loading) return <Loading/>
+  if(error) return <Error/>
   if(data){
       const activityData = new ActivityModel(data);
       const graphData = activityData?.activity;
 
       return (
-          <ResponsiveContainer 
-            aspect="2.61"
+          <ResponsiveContainer
             width={825}
             height={320}
           >
@@ -42,12 +42,12 @@ function Activity(){
                 verticalAlign="top"
                 align="right"
                 iconType="circle"
-                iconSize="10"
+                iconSize={10}
                 height={80}
               />
             <text
-              x={30}
-              y={38}
+              x={0}
+              y={20}
               fill="var(--color-blue-dark)"
               style={ActivityStyles.text}
             >
@@ -58,6 +58,7 @@ function Activity(){
               <XAxis 
                 dataKey="day"
                 tickLine={false}
+                dy={16}
                 />
 
               <YAxis 
@@ -72,13 +73,16 @@ function Activity(){
 
               <YAxis 
                 dataKey="calories"
-                yAxisId="calories" 
+                yAxisId="calories"
+                orientation='left'
+                domain={[0, 'dataMax + 20']}
                 hide/>
 
               <Tooltip
                 offset={50}
                 label={false}
-                content={<ActivityTooltip />}
+                content={<ActivityTooltip/>}
+                wrapperStyle={{outline: 'none'}}
                 cursor={{
                   fill: 'var(--color-gray-semi-transparent)',
                   strokeOpacity: 0.2,
@@ -100,7 +104,6 @@ function Activity(){
                 barSize={7}
                 radius={[3, 3, 0, 0]}
                 fill="var(--color-red-dark)" />
-
 
             </BarChart>
           </ResponsiveContainer>
