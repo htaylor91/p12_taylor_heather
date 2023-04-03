@@ -1,27 +1,29 @@
-
 import PerformanceModel from '../models/PerformanceModel.js';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-
 import useAxios from '../hooks/useAxios';
+import Error from './Error';
+import Loading from './Loading';
 
-
+/**
+ * @component
+ */
 function Performance() {
+  const {loading, error, data} = useAxios('performanceService');
 
-  const [loading, error, data] = useAxios('performanceService');
-
-  if(loading) return <div>Loading...</div>
-  if(error) return <div>Error</div>
+  if(loading) return <Loading />
+  if(error) return <Error />
   if(data){
+
     const performanceData = new PerformanceModel(data);
     const graphData = performanceData?.performance;
 
     const PerformanceStyles = {
       RadarChart: {
         backgroundColor: 'var(--color-gray-dark)',
-        borderRadius: '5px'
+        borderRadius: '5px',
       },
       PolarAngleAxis: {
-        padding: '5px', 
+        padding: '10px', 
         fontSize: '12px'
       }
     }
@@ -34,24 +36,26 @@ function Performance() {
                 outerRadius={90}
                 data={graphData} 
                 style={PerformanceStyles.RadarChart}
-                startAngle={30}
-                endAngle={390}
+                startAngle={-150}
+                endAngle={210}
                 margin={{ top: 25, right: 30, left: 30, bottom: 25 }}
               >
 
                   <PolarGrid 
                     gridType="polygon"
-                    radialLines={false}/>
+                    radialLines={false}
+                    />
 
                   <PolarAngleAxis 
                     dataKey="kind"
                     axisLine={false}
-                    tick={{ fill: "var(--color-white)", padding: '5px'}}
+                    tick={{ fill: "var(--color-white)", padding: '10px'}}
                     style={PerformanceStyles.PolarAngleAxis}
                   />
 
                   <PolarRadiusAxis
-                    tick={false} 
+                    tick={false}
+                    tickCount={6}
                     axisLine={false}
                   />
 
