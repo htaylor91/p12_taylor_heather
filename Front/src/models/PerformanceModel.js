@@ -1,10 +1,21 @@
-
-export default class PerformanceModel {
-    constructor({ userId, data }) {
-        this.userId = userId;
+/**
+ * Model for the performance data
+ * @property {Object[]} performance - The formatted performance data
+ */
+class PerformanceModel {
+    /**
+     * @param {Object} params
+     * @param {Object[]} params.data - The performance data
+     */
+    constructor({data}) {
         this.performance = this.getFormattedPerformance(data);
     }
 
+    /**
+     * Format the performance data received from the API
+     * @param {Object[]} data 
+     * @returns {Object[] | null}
+     */
     getFormattedPerformance(data){
         if(data){
             const performanceLabels = {
@@ -23,7 +34,8 @@ export default class PerformanceModel {
                 };
             });
         }
-
         return null;
     }
 }
+
+export default PerformanceModel;
