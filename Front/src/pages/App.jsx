@@ -1,21 +1,27 @@
-import * as React from 'react';
 import '../styles/App.css';
 import { Outlet } from "react-router-dom";
-import { CurrentUserProvider } from '../contexts/CurrentUserContext';
-import { ServiceProvider } from '../contexts/ServiceContext';
-
+import CurrentUserProvider from '../contexts/CurrentUserProvider';
+import CurrentServiceProvider from '../contexts/CurrentServiceProvider';
 import HeaderNavigation from '../components/HeaderNavigation';
 import SideNavigation from '../components/SideNavigation';
 
+/**
+ * @external Outlet
+ * @see {@link https://reactrouter.com/en/main/components/outlet}
+ */
+/**
+ * @component
+ * @see {@link external:Outlet}
+ */
 function App() {
   return (
     <div className="App">
       <CurrentUserProvider>
-        <ServiceProvider>
-          <HeaderNavigation />
-          <SideNavigation />
+          <CurrentServiceProvider>
+            <HeaderNavigation />
+            <SideNavigation />
             <Outlet />
-        </ServiceProvider>
+          </CurrentServiceProvider>
       </CurrentUserProvider>
     </div>
   )
