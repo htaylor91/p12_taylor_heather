@@ -1,24 +1,24 @@
 import '../styles/Home.css'
-import { useCurrentUser, useCurrentUserUpdate } from '../contexts/CurrentUserContext';
-import { useService, useServiceUpdate } from '../contexts/ServiceContext';
+import { useCurrentUser} from '../hooks/useCurrentUser';
+import { useCurrentService } from '../hooks/useCurrentService';
 import Toggle from '../components/Toggle';
 
+/**
+ * @component
+ */
 function Home() {
-    const currentUser = useCurrentUser();
-    const toggleCurrentUser = useCurrentUserUpdate();
-
-    const currentService = useService();
-    const toggleService = useServiceUpdate();
+    const {currentUser, toggleCurrentUser} = useCurrentUser();
+    const {currentService, toggleCurrentService} = useCurrentService();
 
     return (
         <main className='Home'>
             <div>
                 <Toggle
-                    handleChange={toggleService} 
+                    handleChange={toggleCurrentService}
                     labelText="Service:" 
                     toggleId="toggle-service" 
                     checked={currentService.constructor.name === 'APIService'}
-                /> 
+                />
                 <span>{currentService.constructor.name}</span>
             </div>
             <div>
