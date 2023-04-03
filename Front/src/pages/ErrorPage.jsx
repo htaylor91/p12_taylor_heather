@@ -1,4 +1,7 @@
-
+/**
+ * @component
+ * Page to render when the user tries to access a page that doesn't exist
+ */
 function ErrorPage(){
     return (
         <div style={{display: 'grid', placeContent: 'center', height: '100vh'}}>
