@@ -1,12 +1,21 @@
 import logo from '../assets/logo.svg';
 import '../styles/Navigation.css'
 import IconTile from './IconTile'
+import { useCurrentUser } from '../hooks/useCurrentUser';
 import { NavLink } from 'react-router-dom';
-import { useCurrentUser } from '../contexts/CurrentUserContext';
 
+/**
+ * @external NavLink
+ * @see {@link https://reactrouter.com/en/main/components/nav-link}
+ */
+
+/**
+ * @component
+ * @see {@link external:NavLink} for more information about the NavLink component
+ */
 function HeaderNavigation() {
-    const currentUser = useCurrentUser();
-    
+    const {currentUser} = useCurrentUser();
+
     return (
         <header className='header'>
             <div className='logo-wrapper'>

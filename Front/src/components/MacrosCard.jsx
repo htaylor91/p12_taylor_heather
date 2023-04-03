@@ -14,6 +14,9 @@ const macroIcons = {
     "Lipides": cheeseburger
 }
 
+/**
+ * @component
+ */
 function MacrosCard({macro, value}){
     let abbreviation = "";
     macro === "Calories" ? abbreviation = "kCal" : abbreviation = "g";
@@ -31,9 +34,15 @@ function MacrosCard({macro, value}){
 }
 
 MacrosCard.propTypes = {
+    /**
+     * The name of the macronutrient.
+     * "Calories" "Proteines" "Glucides" "Lipides"
+     */
     macro: PropTypes.string.isRequired,
+    /**
+     * The value of the macronutrient.
+     */
     value: PropTypes.number.isRequired
 }
-
 
 export default MacrosCard

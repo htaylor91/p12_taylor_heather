@@ -5,6 +5,9 @@ import swim from '../assets/swim.svg'
 import bicycle from '../assets/bicycle.svg'
 import barbell from '../assets/barbell.svg'
 
+/**
+ * @component
+ */
 function SideNavigation(){
     return (
         <div className='sidenav'>
