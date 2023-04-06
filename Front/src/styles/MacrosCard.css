@@ -1,10 +1,14 @@
 .MacrosCard {
+    --gap-macros: 24px;
+    --height-macros: 124px;
+    --width-macros: 258px;
+    --padding-macros: 32px;
     display: flex;
     align-items: center;
-    gap: 24px;
-    height: 124px;
-    width: 258px;
-    padding: 32px;
+    gap: var(--gap-macros);
+    height: var(--height-macros);
+    width: var(--width-macros);
+    padding: var(--padding-macros);
     border-radius: 5px;
     background-color: var(--color-gray-lightest);
 }
@@ -20,4 +24,15 @@
     color: var(--color-gray);
 }
 
-
+@container profile (width < 1200px){
+    .MacrosCard {
+        --gap-macros: 15px;
+        --height-macros: 95px;
+        --width-macros: 195px;
+        --padding-macros: 16px;
+        gap: var(--gap-macros);
+        height: var(--height-macros);
+        width: var(--width-macros);
+        padding: var(--padding-macros);
+    }
+}

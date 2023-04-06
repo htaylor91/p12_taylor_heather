@@ -1,15 +1,14 @@
-#root, .App {
-  min-height: 100vh;
-}
-
 .App {
+  min-width: 100vw;
+  min-height: 100vh;
+  --header-height: 91px;
+  --sidenav-width: 117px;
   display: grid;
   grid-template-areas: 
   "header header"
   "sidenav main";
-
-  grid-template-columns: 117px 1fr;
-  grid-template-rows: 91px 1fr;
+  grid-template-columns: var(--sidenav-width) 1fr;
+  grid-template-rows: var(--header-height) 1fr;
 }
 
 .header {
@@ -18,8 +17,10 @@
 
 .sidenav {
   grid-area: sidenav;
+  min-height: calc(100vh - var(--header-height));
 }
 
 .Profile {
   grid-area: main;
+  min-width: calc(100vw - var(--sidenav-width));
 }
