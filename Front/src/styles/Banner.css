@@ -1,0 +1,16 @@
+.Banner {
+    width: 1170px;
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+
+.Banner > h2 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+@container profile (width < 1200px){
+    .Banner {
+        width: 835px;
+    }
+}
