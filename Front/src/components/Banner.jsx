@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-
+import "../styles/Banner.css"
 /**
  * @component
  */
 function Banner({name}){
     return (
         <div className="Banner">
-            <h2 style={{fontSize: '48px', fontWeight: '500'}}>
+            <h2>
                 <span>Bonjour </span>
                 <span style={{color: 'var(--color-red)'}}>{name}</span>
             </h2>
