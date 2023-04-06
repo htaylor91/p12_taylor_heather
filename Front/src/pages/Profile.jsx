@@ -27,23 +27,33 @@ function Profile(){
         const {firstName, keyData, score} = user;
 
         return (
-                <main className='container-horizontal Profile'>
-                    <article className='container-vertical'>
+                <main className='main-profile'>
+                    <article className='Profile'>
                         <Banner name={firstName}></Banner>
-                        <div className='container-horizontal Profile-charts'>
-                            <div className='container-vertical'>
-                                <Activity></Activity>
-                                <div className='container-horizontal Profile-square-charts'>
+                        <div className='graphics-container'>
+                            <div className='recharts-container'>
+                                <div className='activity-container'>
+                                    <Activity></Activity>
+                                </div>
+                                <div className='square-charts-container'>
                                     <Sessions></Sessions>
                                     <Performance></Performance>
                                     <Score score={score}></Score>
                                 </div>
                             </div>
-                            <div className="container-vertical macros">
-                                <MacrosCard macro='Calories' value={keyData?.calories}></MacrosCard>
-                                <MacrosCard macro='Glucides' value={keyData?.carbohydrates}></MacrosCard>
-                                <MacrosCard macro='Lipides' value={keyData?.lipids}></MacrosCard>
-                                <MacrosCard macro='Proteines' value={keyData?.proteins}></MacrosCard>
+                            <div className='macros-container'>
+                                <div className="macros-card-wrapper">
+                                    <MacrosCard macro='Calories' value={keyData?.calories}></MacrosCard>
+                                </div>
+                                <div className="macros-card-wrapper">
+                                    <MacrosCard macro='Glucides' value={keyData?.carbohydrates}></MacrosCard>
+                                </div>
+                                <div className="macros-card-wrapper">
+                                    <MacrosCard macro='Lipides' value={keyData?.lipids}></MacrosCard>
+                                </div>
+                                <div className="macros-card-wrapper">
+                                    <MacrosCard macro='Proteines' value={keyData?.proteins}></MacrosCard>
+                                </div>
                             </div>
                         </div>
                     </article>
