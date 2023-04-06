@@ -6,7 +6,7 @@ import Loading from '../Loading';
 import Error from '../Error'
 
 const ActivityStyles = {
-  text : {
+  text: {
     fontSize: '15px',
     fontWeight: '600',
   }
@@ -26,17 +26,24 @@ function Activity(){
 
       return (
           <ResponsiveContainer
-            width={825}
-            height={320}
-          >
-
+            width="100%"
+            height="100%"
+            >
             <BarChart
-            width={825}
-            height={320}
+            alignSelf='center'
             data={graphData}
             barGap={8}
-            margin={{top: 5, right: 30, left: 20, bottom: 5,}}
+            margin={{top: 5, right: 0, left: 20, bottom: 5}}
             >
+
+            <text
+              x={20}
+              y={20}
+              fill="var(--color-blue-dark)"
+              style={ActivityStyles.text}
+            >
+              <tspan>Activité quotidienne</tspan>
+            </text>
 
             <Legend
                 verticalAlign="top"
@@ -44,21 +51,21 @@ function Activity(){
                 iconType="circle"
                 iconSize={10}
                 height={80}
+                wrapperStyle={{right: 0, left: 20}}
               />
-            <text
-              x={0}
-              y={20}
-              fill="var(--color-blue-dark)"
-              style={ActivityStyles.text}
-            >
-            <tspan>Activité quotidienne</tspan>
-            </text>
 
-              <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+
+
+              <CartesianGrid 
+                strokeDasharray="3 3" 
+                vertical={false}
+              />
+
               <XAxis 
                 dataKey="day"
                 tickLine={false}
-                dy={16}
+                height={50}
+                tickMargin={16}
                 />
 
               <YAxis 
@@ -66,9 +73,11 @@ function Activity(){
                 yAxisId="kilograms" 
                 orientation='right'
                 tickCount={3}
-                domain={['dataMin - 2', 'dataMax + 1']}
+                domain={['dataMin - 1', 'dataMax + 2']}
                 tickLine={false}
                 axisLine={false}
+                width={50}
+                tickMargin={16}
                 />
 
               <YAxis 
@@ -76,13 +85,14 @@ function Activity(){
                 yAxisId="calories"
                 orientation='left'
                 domain={[0, 'dataMax + 20']}
-                hide/>
+                hide
+                />
 
               <Tooltip
-                offset={50}
+                offset={60}
                 label={false}
                 content={<ActivityTooltip/>}
-                wrapperStyle={{outline: 'none'}}
+                wrapperStyle={{outline: 'transparent'}}
                 cursor={{
                   fill: 'var(--color-gray-semi-transparent)',
                   strokeOpacity: 0.2,
@@ -94,7 +104,7 @@ function Activity(){
                 dataKey="kilograms" 
                 yAxisId="kilograms" 
                 barSize={7}
-                radius={[3, 3, 0, 0]}
+                radius={[20, 20, 0, 0]}
                 fill="var(--color-gray-dark)" />
 
               <Bar 
@@ -102,7 +112,7 @@ function Activity(){
                 dataKey="calories" 
                 yAxisId="calories" 
                 barSize={7}
-                radius={[3, 3, 0, 0]}
+                radius={[20, 20, 0, 0]}
                 fill="var(--color-red-dark)" />
 
             </BarChart>
