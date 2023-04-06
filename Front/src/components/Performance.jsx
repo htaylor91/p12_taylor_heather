@@ -29,16 +29,15 @@ function Performance() {
     }
 
     return (
-        <ResponsiveContainer width={258} height={263} aspect={1} >
-              <RadarChart 
-                width={258} 
-                height={263} 
+        <ResponsiveContainer width={258} height={263} >
+              <RadarChart
                 outerRadius={90}
                 data={graphData} 
                 style={PerformanceStyles.RadarChart}
                 startAngle={-150}
                 endAngle={210}
                 margin={{ top: 25, right: 30, left: 30, bottom: 25 }}
+                padding="50px"
               >
 
                   <PolarGrid 
