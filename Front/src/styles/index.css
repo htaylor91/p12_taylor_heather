@@ -19,6 +19,7 @@
   --color-red-light: hsl(0 68% 95%);
   --color-red: hsl(0 100% 50%);
   --color-red-dark: hsl(0 100% 45%);
+  --color-red-gradient: linear-gradient(to right, var(--color-red) 71%, var(--color-red-dark) 71%);
 
   --color-gray-lightest: hsl(0 0% 97%);
   --color-gray-light: hsl(0 0% 87%);
