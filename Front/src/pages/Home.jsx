@@ -9,6 +9,13 @@ import Toggle from '../components/Toggle';
 function Home() {
     const {currentUser, toggleCurrentUser} = useCurrentUser();
     const {currentService, toggleCurrentService} = useCurrentService();
+    
+    let serviceName;
+    if(currentService.constructor.name === 'APIService' || currentService.constructor.name === 'DN') {
+        serviceName = 'SportSee API';
+    } else {
+        serviceName = 'Mocked API';
+    }
 
     return (
         <main className='Home'>
@@ -17,9 +24,9 @@ function Home() {
                     handleChange={toggleCurrentService}
                     labelText="Service:" 
                     toggleId="toggle-service" 
-                    checked={currentService.constructor.name === 'APIService'}
+                    checked={serviceName === 'SportSee API'}
                 />
-                <span>{currentService.constructor.name}</span>
+                <span>{serviceName}</span>
             </div>
             <div>
                 <Toggle 
