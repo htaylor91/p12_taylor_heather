@@ -21,7 +21,7 @@ Sportsee is a startup dedicated to sports coaching.
 
 #### 1. Fork this repository
 
-Click on the fork button in the top right corner of this page.
+Click on the fork button in the top right corner of the [repository](https://github.com/htaylor91/P12_TAYLOR_Heather) page.
 
 #### 2. Clone the forked respository to your local machine
 
