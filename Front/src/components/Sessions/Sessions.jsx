@@ -1,13 +1,18 @@
 import SessionsModel from '../../models/SessionsModel';
 import useAxios from '../../hooks/useAxios';
-
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import SessionsTooltip from './SessionsTooltip';
 import Error from '../Error';
 import Loading from '../Loading';
 
 /**
+ * @external LineChart
+ * @see {@link https://recharts.org/en-US/api/LineChart}
+ */
+
+/**
  * @component
+ * @see {@link external:LineChart}
  */
 function Sessions() {
   const {loading, error, data} = useAxios('sessionsService');
@@ -77,7 +82,6 @@ function Sessions() {
           </ResponsiveContainer>
     );
   }
-  return null;
 };
 
 export default Sessions;

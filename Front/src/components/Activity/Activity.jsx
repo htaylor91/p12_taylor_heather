@@ -5,6 +5,11 @@ import ActivityTooltip from './ActivityTooltip';
 import Loading from '../Loading';
 import Error from '../Error'
 
+/**
+ * @external BarChart
+ * @see {@link https://recharts.org/en-US/api/BarChart}
+ */
+
 const ActivityStyles = {
   text: {
     fontSize: '15px',
@@ -14,6 +19,7 @@ const ActivityStyles = {
 
 /**
  * @component
+ * @see {@link external:BarChart}
  */
 function Activity(){
   const {loading, error, data} = useAxios('activityService');
@@ -53,8 +59,6 @@ function Activity(){
                 height={80}
                 wrapperStyle={{right: 0, left: 20}}
               />
-
-
 
               <CartesianGrid 
                 strokeDasharray="3 3" 

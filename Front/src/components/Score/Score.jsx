@@ -2,6 +2,11 @@ import { RadialBarChart, RadialBar, PolarAngleAxis, Legend, ResponsiveContainer 
 import ScoreLegend from './ScoreLegend';
 import PropTypes from 'prop-types';
 
+/**
+ * @external RadialBarChart
+ * @see {@link https://recharts.org/en-US/api/RadialBarChart}
+ */
+
 const ScoreStyles = {
   RadialBarChart: {
     backgroundColor: 'var(--color-gray-lightest)',
@@ -16,6 +21,7 @@ const ScoreStyles = {
 
 /**
  * @component
+ * @see {@link external:RadialBarChart}
  */
 function Score({score}){
   const data = [{score: `${score}`, fill: 'var(--color-red)'}];
@@ -58,8 +64,7 @@ function Score({score}){
         />
       </RadialBarChart>
     </ResponsiveContainer>
-    );
-
+  );
 }
 
 Score.propTypes = {
