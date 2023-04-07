@@ -1,0 +1,22 @@
+.ErrorPage {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.ErrorPage > h1 {
+    font-size: 5rem;
+    color: var(--color-red-dark);
+}
+
+.navlink-return {
+    font-size: 2rem;
+    padding-top: 2rem;
+    color: var(--color-black);
+}
+
+.navlink-return:hover {
+    color: var(--color-red-dark);
+}
