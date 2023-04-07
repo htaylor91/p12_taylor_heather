@@ -26,7 +26,7 @@ function HeaderNavigation() {
                 <ul>
                     <li>
                     <NavLink 
-                    className="navlink text-shadow"
+                    className="navlink"
                     style={({ isActive }) => {
                         return {
                             textDecorationColor: isActive ? "var(--color-white)" : "transparent",
@@ -36,7 +36,7 @@ function HeaderNavigation() {
                     </li>
                     <li>
                     <NavLink 
-                    className="navlink text-shadow"
+                    className="navlink"
                     style={({ isActive }) => {
                         return {
                             textDecorationColor: isActive ? "var(--color-white)" : "transparent",
@@ -46,7 +46,7 @@ function HeaderNavigation() {
                     </li>
                     <li>
                     <NavLink 
-                    className="navlink text-shadow"
+                    className="navlink"
                     style={({ isActive }) => {
                         return {
                             textDecorationColor: isActive ? "var(--color-white)" : "transparent",
@@ -56,7 +56,7 @@ function HeaderNavigation() {
                     </li>
                     <li>
                     <NavLink 
-                    className="navlink text-shadow"
+                    className="navlink"
                     style={({ isActive }) => {
                         return {
                             textDecorationColor: isActive ? "var(--color-white)" : "transparent",
