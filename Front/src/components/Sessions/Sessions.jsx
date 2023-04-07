@@ -1,7 +1,7 @@
 import SessionsModel from '../../models/SessionsModel';
 import useAxios from '../../hooks/useAxios';
 
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import SessionsTooltip from './SessionsTooltip';
 import Error from '../Error';
 import Loading from '../Loading';
@@ -58,10 +58,9 @@ function Sessions() {
                 stroke='var(--color-white)'
               />
 
-              <Tooltip 
-                content={<SessionsTooltip/>}
-                style={{border: 'none', outline: 'none'}}
+              <Tooltip
                 cursor={false}
+                content={<SessionsTooltip/>}
                 wrapperStyle={{outline: 'none'}}
               />
 
