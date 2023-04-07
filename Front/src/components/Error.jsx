@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 /**
  * @component
  */
-function Error({children = 'Une erreur s\'est produite'}) {
+function Error({children = 'Une erreur s\'est produite lors de la connexion au serveur'}) {
     return (
-        <div className="error">{children}</div>
+        <div style={{display: 'grid', placeContent: 'center', fontSize: '2em'}}>{children}</div>
     );
 }
 
@@ -17,7 +17,7 @@ Error.propTypes = {
 }
 
 Error.defaultProps = {
-    children: 'Une erreur s\'est produite'
+    children: 'Une erreur s\'est produite lors de la connexion au serveur'
 }
 
 export default Error;
