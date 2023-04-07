@@ -4,14 +4,14 @@ const ActivityTooltipStyles = {
     container: {
         backgroundColor: 'var(--color-red-dark)',
         color: 'var(--color-white)',
-        padding: '5px',
+        padding: '15px 10px',
         height: 'auto',
-        maxWidth: '50px',
-        fontSize: '11px',
+        maxWidth: '60px',
+        fontSize: '10px',
         fontWeight: '500',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        alignItems: 'center',
         gap: '10px',
     }
 }
