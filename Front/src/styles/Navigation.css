@@ -16,9 +16,10 @@
     margin-right: 50px;
 }
 
-h1 {
-    font-size: 24px; /*1.5rem*/
+.logo-wrapper > h1 {
+    font-size: 24px;
     color: var(--color-red);
+    margin-left: 10px;
 }
 
 .header > nav {
