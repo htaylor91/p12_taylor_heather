@@ -1,7 +1,7 @@
 import SessionsModel from '../../models/SessionsModel';
 import useAxios from '../../hooks/useAxios';
 
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import SessionsTooltip from './SessionsTooltip';
 import Error from '../Error';
 import Loading from '../Loading';
@@ -20,13 +20,14 @@ function Sessions() {
 
     const SessionsStyles = {
       LineChart: {
-        backgroundColor: 'var(--color-red)',
+        background: 'var(--color-red-gradient)',
         borderRadius: '5px'
       },
       text: {
         fill: 'var(--color-white)',
         fontSize: '15px',
-        opacity: '0.5'
+        opacity: '0.6',
+        fontWeight: '550'
       }
     }
 
@@ -36,7 +37,7 @@ function Sessions() {
             <LineChart
                 data={graphData}
                 style={SessionsStyles.LineChart}
-                margin={{top: 5, right: 20, left: 20, bottom: 5}}
+                margin={{top: 20, right: 15, left: 15, bottom: 20}}
             >
 
               <text style={SessionsStyles.text}>
@@ -54,7 +55,7 @@ function Sessions() {
                 tickLine={false}
                 axisLine={false}
                 opacity='0.5'
-                stroke='var(--color-white)'  
+                stroke='var(--color-white)'
               />
 
               <Tooltip 
@@ -64,11 +65,11 @@ function Sessions() {
                 wrapperStyle={{outline: 'none'}}
               />
 
-              <Line 
+              <Line
                 type="natural"
                 dataKey="sessionLength"
                 stroke="var(--color-white)"
-                strokeWidth={2} 
+                strokeWidth={1.6} 
                 dot={false}
               />
 
