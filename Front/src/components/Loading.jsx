@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
  */
 function Loading({children = 'Chargement en cours...'}) {
     return (
-        <div className="loading">{children}</div>
+        <div style={{display: 'grid', placeContent: 'center', fontSize: '2em'}}>{children}</div>
     );
 }
 
