@@ -1,6 +1,6 @@
 # Sportsee
 
-![Sportsee](./Front/src/assets/logo.svg)
+![Sportsee](./src/assets/logo.svg)
 
 ## Introduction
 
