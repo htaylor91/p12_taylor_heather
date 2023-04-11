@@ -13,37 +13,52 @@ Sportsee is a startup dedicated to sports coaching.
 
 ### Prerequisites
 
+- [Visual Studio Code](https://code.visualstudio.com/) (or your preferred IDE)
 - [Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
 - [NodeJS (**version 18.15.0**)](https://nodejs.org/en/) - includes NPM 9.5.0
-- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [NPM (**version 9.5.0**)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ### Install and launch the project (using the Mocked API)
 
 #### 1. Fork this repository
 
-Click on the fork button in the top right corner of the [repository](https://github.com/htaylor91/P12_TAYLOR_Heather) page.
+- Click on the fork button in the top right corner of the [repository](https://github.com/htaylor91/P12_TAYLOR_Heather) page.
 
 #### 2. Clone the forked respository to your local machine
 
-Replace the url with the url below of your forked repository.
+- Replace the url below with the url of your forked repository.
 
-```bash
-git clone https://github.com/your-username/project-name.git
-```
+    `https://github.com/your-username/project-name.git`
+
+- Open a terminal window and navigate to the directory that will store your project.
+
+    ```bash
+    cd project-name
+    ```
+
+- In your terminal, run the command below. The dot at the end will clone the project into the current directory.
+
+    ```bash
+    git clone https://github.com/your-username/project-name.git .
+    ```
 
 #### 3. Install the dependencies
 
-```bash
-npm install
-```
+- In your terminal, run the command below to install the dependencies listed in the package.json file.
+
+    ```bash
+    npm install
+    ```
 
 #### 4. Launch the project
 
-```bash
-npm run start
-```
+- In your terminal, run the command below to launch the project.
 
-The project will launch in your browser at `http://localhost:5173`
+    ```bash
+    npm run start
+    ```
+
+    The project will launch in your browser at `http://localhost:5173`
 
 ---
 
