@@ -6,8 +6,8 @@
 
 Sportsee is a startup dedicated to sports coaching.
 
-- [Sportsee Website (Live Preview)](https://htaylor91.github.io/P12_TAYLOR_Heather/)
-- [Documentation](https://htaylor91.github.io/sportsee_documentation/)
+- [Sportsee Website (Live Preview)](https://taylorfullstack.github.io/P12_TAYLOR_Heather/)
+- [Documentation](https://taylorfullstack.github.io/sportsee_documentation/)
 
 ## Installation
 
@@ -22,7 +22,7 @@ Sportsee is a startup dedicated to sports coaching.
 
 #### 1. Fork this repository
 
-- Click on the fork button in the top right corner of the [repository](https://github.com/htaylor91/P12_TAYLOR_Heather) page.
+- Click on the fork button in the top right corner of the [repository](https://github.com/taylorfullstack/P12_TAYLOR_Heather) page.
 
 #### 2. Clone the forked respository to your local machine
 
